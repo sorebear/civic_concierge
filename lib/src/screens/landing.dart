@@ -13,17 +13,10 @@ class LandingScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Image.asset(
-                'assets/images/concierge.png',
+                'assets/images/LPCS_Logo_Crop.png',
                 width: MediaQuery.of(context).size.width - 80,
               ),
               SizedBox(height: 16.0),
-              Container(
-                child: Text(
-                  'The Civic Concierge',
-                  style: Theme.of(context).textTheme.display4,
-                  textAlign: TextAlign.center,
-                ),
-              ),
               SizedBox(height: 32.0),
               ThemedButton(
                 text: 'Sign Up',

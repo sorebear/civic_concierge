@@ -18,12 +18,13 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primaryColor: Color.fromRGBO(66, 87, 127, 1),
-        accentColor: Color.fromRGBO(235, 48, 91, 1),
+        primaryColor: Color.fromRGBO(135, 152, 146, 1),
+        accentColor: Color.fromRGBO(205, 162, 156, 1),
+        backgroundColor: Color.fromRGBO(242, 237, 233, 1),
         textTheme: TextTheme(
           display4: TextStyle(
             fontFamily: 'DancingScript',
-            fontSize: 72.0,
+            fontSize: 54.0,
             color: Colors.white,
             height: 1,
             fontWeight: FontWeight.bold,

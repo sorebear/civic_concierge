@@ -16,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
   bool _loggedIn = false;
 
   _SplashScreenState() {
-    _fetchContent();
+    // _fetchContent();
     _fetchUser();
   }
 

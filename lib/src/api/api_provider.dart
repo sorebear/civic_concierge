@@ -8,7 +8,7 @@ import '../models/post_model.dart';
 
 class ApiProvider {
   final Client client = Client();
-  final String _root = 'http://wordpressapi.local/wp-json';
+  final String _root = 'https://dayrain.360-biz.com/wp-json';
 
   Future<Response> loginUser(usernameOrEmail, password) async {
     Map<String, String> headers = new Map();
@@ -32,15 +32,9 @@ class ApiProvider {
     }
   }
 
-  Future<Map<String, dynamic>> registerUser(username, email, password) async {
+  Future<Map<String, dynamic>> registerUser(Map<String, String> body) async {
     Map<String, String> headers = new Map();
     headers.addEntries([MapEntry('Content-Type', 'application/json')]);
-    
-    Map<String, String> body = {
-      'username': username,
-      'email': email,
-      'password': password,
-    };
     
     try {
       var res = await client.post(

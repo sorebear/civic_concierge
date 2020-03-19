@@ -9,14 +9,14 @@ class ThemedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RaisedButton(
-      padding: EdgeInsets.symmetric(vertical: 16.0),
+      padding: EdgeInsets.symmetric(vertical: 10.0),
       child: Container(
         width: MediaQuery.of(context).size.width - 80,
         child: Text(
-          this.text,
+          this.text.toUpperCase(),
           style: TextStyle(
             color: Colors.white,
-            fontSize: 28.0,
+            fontSize: 22.0,
             fontWeight: FontWeight.bold,
           ),
           textAlign: TextAlign.center,

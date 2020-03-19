@@ -17,6 +17,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Map<String, String> _userData = {
     'username': '',
     'email': '',
+    'address': '',
+    'phone': '',
     'password': '',
     'passwordConfirm': '',
   };
@@ -65,11 +67,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
   }
 
   void _submit(AppState model, context) async {
-    var res = await apiProvider.registerUser(
-      _userData['username'],
-      _userData['email'],
-      _userData['password'],
-    );
+    Map<String, String> body = {
+      'username': _userData['username'],
+      'email': _userData['email'],
+      'password': _userData['password'],
+      'phone': _userData['phone'],
+      'address': _userData['address'],
+    };
+
+    var res = await apiProvider.registerUser(body);
 
     switch (res['code']) {
       case 406:
@@ -128,11 +134,19 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   children: <Widget>[
                     ThemedTextField(
                       onChanged: (val) => _updateValue('username', val),
-                      label: 'Name',
+                      label: 'Username',
                     ),
                     ThemedTextField(
                       onChanged: (val) => _updateValue('email', val),
                       label: 'Email',
+                    ),
+                    ThemedTextField(
+                      onChanged: (val) => _updateValue('address', val),
+                      label: 'Address',
+                    ),
+                    ThemedTextField(
+                      onChanged: (val) => _updateValue('phone', val),
+                      label: 'Telephone'
                     ),
                     ThemedTextField(
                       onChanged: (val) => _updateValue('password', val),

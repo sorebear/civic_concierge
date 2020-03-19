@@ -51,6 +51,7 @@ flutter:
   #  - images/a_dot_ham.jpeg
   assets:
     - assets/images/concierge.png
+    - assets/images/LPCS_Logo_Crop.png
 
   fonts:
     - family: DancingScript

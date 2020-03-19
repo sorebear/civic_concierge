@@ -34,14 +34,18 @@ class ThemedTextField extends StatelessWidget {
             width: MediaQuery.of(context).size.width - 100,
             child: Text(
               label,
-              style: Theme.of(context).textTheme.display1,
+              // style: Theme.of(context).textTheme.display1,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+              ),
               textAlign: TextAlign.start,
             ),
           ),
           TextField(
             obscureText: obscureText,
             minLines: minLines,
-            maxLines: minLines + 2,
+            maxLines: obscureText ? 1 : minLines + 2,
             decoration: InputDecoration(
               contentPadding: EdgeInsets.symmetric(
                 horizontal: 20.0,
